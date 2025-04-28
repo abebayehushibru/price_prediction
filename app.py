@@ -1,9 +1,9 @@
 import joblib
 import numpy as np
 from flask import Flask, request, jsonify
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app)
 # Load the trained model using joblib
 model = joblib.load('house_price_model.pkl')
 
